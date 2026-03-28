@@ -56,7 +56,7 @@ namespace Lab8.Blue
                 }
             }
 
-            public int SummaryScore
+            public int TotalScore
             {
                 get
                 {
@@ -141,9 +141,9 @@ namespace Lab8.Blue
                     for (int j = 0; j < teams.Length - 1 - i; j++)
                     {
                         bool shouldSwap = false;
-                        if (teams[j].SummaryScore < teams[j + 1].SummaryScore)
+                        if (teams[j].TotalScore < teams[j + 1].TotalScore)
                             shouldSwap = true;
-                        else if (teams[j].SummaryScore == teams[j + 1].SummaryScore)
+                        else if (teams[j].TotalScore == teams[j + 1].TotalScore)
                             if (teams[j].TopPlace > teams[j + 1].TopPlace)
                                 shouldSwap = true;
 
@@ -156,7 +156,7 @@ namespace Lab8.Blue
             public void Print()
             {
                 Console.WriteLine($"Команда: {Name}");
-                Console.WriteLine($"Общий счет: {SummaryScore} баллов");
+                Console.WriteLine($"Общий счет: {TotalScore} баллов");
                 Console.WriteLine($"Лучшее место: {TopPlace}");
                 Console.WriteLine("Состав команды:");
                 Sportsman[] sp = Sportsmen;
